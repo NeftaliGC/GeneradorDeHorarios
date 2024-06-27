@@ -4,7 +4,7 @@ from classes.Reader import Reader
 from classes.Horario import Horario
 import re
 import os
-
+from classes.InterfazGrafica import InterfazGrafica
 categorias = []
 
 def main():
@@ -46,6 +46,7 @@ def main():
     with open('src/data/horarios.txt', 'w') as file:
         for i, horario in enumerate(horarios):
             file.write(f'Horario {i+1}\n{horario}\n\n')
+    InterfazGrafica.run(horarios[0])
 
 def generar_combinaciones(cursos, horarios, categoria):
 
