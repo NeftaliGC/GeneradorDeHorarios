@@ -8,7 +8,7 @@ from classes.InterfazGrafica import InterfazGrafica
 categorias = []
 
 def main():
-    reader = Reader('src/data/horarios.csv')
+    reader = Reader('src/data/horarios2.csv')
     reader.read()
     horarios = reader.getData()
     
@@ -43,7 +43,7 @@ def main():
 
 
     #Crear un txt con los horarios en un solo archivo
-    with open('src/data/horarios.txt', 'w') as file:
+    with open('src/data/horarios2.txt', 'w') as file:
         for i, horario in enumerate(horarios):
             file.write(f'Horario {i+1}\n{horario}\n\n')
     InterfazGrafica.run(horarios[4].getCursos())
