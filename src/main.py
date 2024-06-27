@@ -46,7 +46,7 @@ def main():
     with open('src/data/horarios.txt', 'w') as file:
         for i, horario in enumerate(horarios):
             file.write(f'Horario {i+1}\n{horario}\n\n')
-    InterfazGrafica.run(horarios[0])
+    InterfazGrafica.run(horarios[4].getCursos())
 
 def generar_combinaciones(cursos, horarios, categoria):
 
